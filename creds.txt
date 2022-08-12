@@ -1,0 +1,7 @@
+az webapp deployment user set --user-name johanweterings --password 29Ap2k4Dewi!
+
+echo Git deployment URL: $(az webapp deployment source config-local-git --name $webappname --resource-group AzureTutorial --query url --output tsv)
+Git deployment URL: https://johanweterings@mywebapp11989.scm.azurewebsites.net/mywebapp11989.git
+
+echo Web app URL: http://$webappname.azurewebsites.net
+Web app URL: http://mywebapp11989.azurewebsites.net
