@@ -33,7 +33,8 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- task: DotNetCoreCLI@2
+- task: PublishPipelineArtifact@1
   inputs:
-    command: 'publish'
-    publishWebProjects: true
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
